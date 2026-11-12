@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <title>HTML, Biblioteca Front-end</title>
+  </head>
+  <body>
+    <header>
+      <h1>Biblioteca Front-end</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Comandos de HTML</h2>
+      <section id="estrutura">
+        <h2>Estrutura da página</h2>
+
+        <article>
+          <h3><code>&lt;!DOCTYPE html&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a declaração que avisa ao navegador que o
+            documento usa HTML5, a versão atual da linguagem.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> garante que o navegador leia a
+            página do jeito moderno, e não em um modo antigo de compatibilidade.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre, na primeira linha de todo
+            arquivo HTML.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;html&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag que envolve a página inteira. Todo o
+            resto fica dentro dela.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> marcar o início e o fim do
+            documento. O atributo <code>lang</code> informa o idioma, o que
+            ajuda leitores de tela e buscadores.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> uma vez por página, logo depois do
+            doctype.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;html lang="pt-BR"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;head&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a parte da página com informações de
+            bastidor, que não aparecem na tela.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> guardar o título da aba, o idioma
+            dos caracteres, o link do CSS e outras configurações.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> uma vez por página, antes do
+            <code>&lt;body&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;head&gt;
+  &lt;title&gt;Minha página&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;body&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a parte da página que o visitante vê:
+            textos, imagens, botões e links.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir todo o conteúdo visível.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> uma vez por página, depois do
+            <code>&lt;head&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;body&gt;
+  &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;meta&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag solitária, sem fechamento, que
+            guarda informações sobre a página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> definir a codificação dos
+            caracteres (para os acentos aparecerem certos) e o ajuste da página
+            em telas de celular.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> dentro do <code>&lt;head&gt;</code>,
+            uma vez para cada informação.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;title&gt;</code></h3>
+          <p><strong>O que é:</strong> o título da página.</p>
+          <p>
+            <strong>Para que serve:</strong> aparece na aba do navegador, nos
+            favoritos e nos resultados do Google.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> uma vez por página, dentro do
+            <code>&lt;head&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;title&gt;Biblioteca Front-end&lt;/title&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;link&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag solitária que liga a página a um
+            arquivo externo.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> o uso mais comum é ligar o arquivo
+            de estilos CSS. Sem ele, a página aparece sem cores nem layout.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> dentro do <code>&lt;head&gt;</code>,
+            uma vez para cada arquivo.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;link rel="stylesheet" href="css/estilo.css"&gt;</code></pre>
+        </article>
+      </section>
+      <section id="textos">
+        <h2>Textos</h2>
+
+        <article>
+          <h3><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> as tags de título, em seis níveis. O h1 é
+            o mais importante e o h6 o menos importante.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> organizar o conteúdo em tópicos e
+            subtópicos. Buscadores e leitores de tela usam os títulos para
+            entender a página.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> um h1 por página, para o assunto
+            principal, e os demais níveis em ordem, sem pular. Não use título só
+            para deixar a letra grande, para isso existe o CSS.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Tópico&lt;/h3&gt;</code></pre>
+          <h4>Resultado</h4>
+          <h1>Título principal</h1>
+          <h2>Subtítulo</h2>
+          <h3>Tópico</h3>
+        </article>
+
+        <article>
+          <h3><code>&lt;p&gt;</code></h3>
+          <p><strong>O que é:</strong> a tag de parágrafo.</p>
+          <p>
+            <strong>Para que serve:</strong> agrupar um bloco de texto. O
+            navegador deixa um espaço antes e depois de cada parágrafo.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para todo texto corrido da página.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Este é um parágrafo.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Este é um parágrafo.</p>
+        </article>
+
+        <article>
+          <h3><code>&lt;strong&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag que marca um trecho como importante.
+            Por padrão, aparece em negrito.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> destacar uma informação que o
+            leitor não pode perder. Leitores de tela dão ênfase a esse trecho.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em avisos e termos-chave. Se for só
+            visual, use o CSS.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Atenção: &lt;strong&gt;salve o arquivo&lt;/strong&gt; antes de testar.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Atenção: <strong>salve o arquivo</strong> antes de testar.</p>
+        </article>
+
+        <article>
+          <h3><code>&lt;em&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag de ênfase. Por padrão, aparece em
+            itálico.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mudar o tom de uma palavra na
+            frase, como quando você a pronuncia com mais força.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando a ênfase muda o sentido da
+            frase.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Eu &lt;em&gt;realmente&lt;/em&gt; gosto de fotografia.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Eu <em>realmente</em> gosto de fotografia.</p>
+        </article>
+
+        <article>
+          <h3><code>&lt;span&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag neutra, que não muda nada por si
+            só, e funciona dentro da linha.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> pegar um pedaço do texto para
+            estilizar com CSS ou manipular com JavaScript. Você já usou no
+            contador do portfólio.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando precisar marcar um trecho
+            dentro de uma frase e não existir uma tag específica.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Contador: &lt;span id="numero"&gt;0&lt;/span&gt;&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Contador: <span>0</span></p>
+        </article>
+
+        <article>
+          <h3><code>&lt;hr&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag solitária que desenha uma linha
+            horizontal.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> separar assuntos dentro da página.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando houver uma mudança de tema
+            dentro de uma mesma seção.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Primeiro assunto&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Segundo assunto&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Primeiro assunto</p>
+          <hr />
+          <p>Segundo assunto</p>
+        </article>
+      </section>
+      <section id="links-imagens-listas">
+        <h2>Links, imagens e listas</h2>
+
+        <article>
+          <h3><code>&lt;a&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag de link, também chamada de âncora. O
+            atributo <code>href</code> diz para onde o link leva.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> levar o visitante a outra página, a
+            outro site ou a outro ponto da mesma página.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em menus, referências e qualquer texto
+            clicável. Para abrir em outra aba, use <code>target="_blank"</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;a href="https://www.wikipedia.org"&gt;Ir para a Wikipedia&lt;/a&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p><a href="https://www.wikipedia.org">Ir para a Wikipedia</a></p>
+        </article>
+
+        <article>
+          <h3><code>&lt;img&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag solitária que mostra uma imagem. O
+            <code>src</code> é o caminho do arquivo, e o <code>alt</code> é o
+            texto que descreve a imagem.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> inserir fotos e ilustrações na
+            página. O <code>alt</code> aparece se a imagem não carregar e é lido
+            por leitores de tela.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que a imagem fizer parte do
+            conteúdo. Escreva um <code>alt</code> que descreva o que a imagem
+            mostra.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;img src="img/luiz.png" alt="Luiz Henrique" width="300"&gt;</code></pre>
+          <h4>Resultado</h4>
+          <img src="img/luiz.png" alt="Luiz Henrique" width="300" />
+        </article>
+
+        <article>
+          <h3><code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a lista sem ordem, com marcadores. O
+            <code>li</code> é cada item da lista.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir itens que não dependem de
+            sequência, como um menu ou uma lista de compras.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que os itens forem equivalentes
+            entre si. O <code>li</code> só existe dentro de <code>ul</code> ou
+            <code>ol</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;ul&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Pão&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          <h4>Resultado</h4>
+          <ul>
+            <li>Café</li>
+            <li>Pão</li>
+            <li>Leite</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3><code>&lt;ol&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a lista ordenada, numerada
+            automaticamente.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir itens em que a ordem
+            importa, como passos de uma receita.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em tutoriais, rankings e qualquer
+            sequência.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;ol&gt;
+  &lt;li&gt;Abra o editor&lt;/li&gt;
+  &lt;li&gt;Escreva o código&lt;/li&gt;
+  &lt;li&gt;Salve o arquivo&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          <h4>Resultado</h4>
+          <ol>
+            <li>Abra o editor</li>
+            <li>Escreva o código</li>
+            <li>Salve o arquivo</li>
+          </ol>
+        </article>
+      </section>
+      <article>
+        <h3><code>&lt;br&gt;</code></h3>
+        <p>
+          <strong>O que é:</strong> uma tag que quebra a linha, ou seja, faz o
+          texto continuar na linha de baixo.
+        </p>
+        <p>
+          <strong>Para que serve:</strong> separar linhas dentro de um mesmo
+          parágrafo, como em endereços, poemas ou versos de música.
+        </p>
+        <p>
+          <strong>Quando usar:</strong> só quando a quebra faz parte do
+          conteúdo. Para criar espaço entre blocos de texto, use parágrafos
+          separados ou o CSS.
+        </p>
+        <h4>Exemplo</h4>
+        <pre><code>&lt;p&gt;Rua das Flores, 100&lt;br&gt;São Paulo - SP&lt;/p&gt;</code></pre>
+        <h4>Resultado</h4>
+        <p>Rua das Flores, 100<br />São Paulo - SP</p>
+      </article>
+      <article>
+        <h3><code>&amp;lt;</code> e <code>&amp;gt;</code></h3>
+        <p>
+          <strong>O que é:</strong> entidades HTML, que são códigos que mostram
+          os símbolos de menor (&lt;) e de maior (&gt;) como texto na tela.
+        </p>
+        <p>
+          <strong>Para que serve:</strong> exibir uma tag na página sem o
+          navegador executá-la. Sem isso, o navegador acharia que o símbolo abre
+          uma tag.
+        </p>
+        <p>
+          <strong>Quando usar:</strong> sempre que precisar mostrar código HTML
+          escrito na tela, como nesta biblioteca. Toda entidade começa com
+          <code>&amp;</code> e termina com ponto e vírgula.
+        </p>
+        <h4>Exemplo</h4>
+        <pre><code>&amp;lt;p&amp;gt;Olá&amp;lt;/p&amp;gt;</code></pre>
+        <h4>Resultado</h4>
+        <p>&lt;p&gt;Olá&lt;/p&gt;</p>
+      </article>
+
+      <article>
+        <h3><code>&lt;pre&gt;</code></h3>
+        <p>
+          <strong>O que é:</strong> uma tag de texto pré-formatado. Ela mostra o
+          texto exatamente como foi escrito, com os espaços e as quebras de
+          linha.
+        </p>
+        <p>
+          <strong>Para que serve:</strong> exibir trechos em que a formatação
+          importa, como código, poemas e tabelas feitas com texto.
+        </p>
+        <p>
+          <strong>Quando usar:</strong> junto com a tag
+          <code>&lt;code&gt;</code>, para mostrar blocos de código de várias
+          linhas.
+        </p>
+        <h4>Exemplo</h4>
+        <pre><code>&lt;pre&gt;
+Linha 1
+    Linha 2 com recuo
+&lt;/pre&gt;</code></pre>
+        <h4>Resultado</h4>
+        <pre>
+Linha 1
+    Linha 2 com recuo
+</pre
+        >
+      </article>
+
+      <article>
+        <h3><code>&lt;code&gt;</code></h3>
+        <p>
+          <strong>O que é:</strong> uma tag que marca um trecho como código de
+          programação.
+        </p>
+        <p>
+          <strong>Para que serve:</strong> indicar ao navegador, e a quem lê,
+          que aquele texto é código. Por padrão, ele aparece em fonte de largura
+          fixa.
+        </p>
+        <p>
+          <strong>Quando usar:</strong> em trechos curtos, no meio de uma frase,
+          ou dentro do <code>&lt;pre&gt;</code> para blocos maiores.
+        </p>
+        <h4>Exemplo</h4>
+        <pre><code>&lt;p&gt;Use a tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; para quebrar a linha.&lt;/p&gt;</code></pre>
+        <h4>Resultado</h4>
+        <p>Use a tag <code>&lt;br&gt;</code> para quebrar a linha.</p>
+      </article>
+    </main>
+  </body>
+</html>
