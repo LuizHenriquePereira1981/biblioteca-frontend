@@ -384,6 +384,139 @@
           </ol>
         </article>
       </section>
+      <section id="tabelas-formularios">
+        <h2>Tabelas e formulários</h2>
+
+        <article>
+          <h3>
+            <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>,
+            <code>&lt;th&gt;</code> e <code>&lt;td&gt;</code>
+          </h3>
+          <p>
+            <strong>O que é:</strong> as tags de tabela. O <code>table</code> é
+            a tabela inteira, o <code>tr</code> é uma linha, o <code>th</code> é
+            uma célula de cabeçalho e o <code>td</code> é uma célula de dados.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> organizar informações em linhas e
+            colunas, como preços, horários e comparações.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> só para dados de verdade. Para montar
+            o layout da página, use Flexbox ou Grid.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Produto&lt;/th&gt;
+    &lt;th&gt;Preço&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Café&lt;/td&gt;
+    &lt;td&gt;R$ 12,00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          <h4>Resultado</h4>
+          <table>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+            </tr>
+            <tr>
+              <td>Café</td>
+              <td>R$ 12,00</td>
+            </tr>
+          </table>
+        </article>
+
+        <article>
+          <h3><code>&lt;form&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag que envolve um formulário, ou seja,
+            um conjunto de campos que o visitante preenche.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir os campos e enviar os dados
+            para um servidor, ou para o JavaScript tratar.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em cadastros, contatos, buscas e
+            logins.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;form&gt;
+  &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+  &lt;input type="text" id="nome"&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          <h4>Resultado</h4>
+          <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" />
+            <button type="submit">Enviar</button>
+          </form>
+        </article>
+
+        <article>
+          <h3><code>&lt;input&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag solitária que cria um campo de
+            entrada. O atributo <code>type</code> define o tipo: texto, e-mail,
+            senha, número, data e outros.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> receber o que o visitante digita ou
+            escolhe.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> dentro de um formulário. O
+            <code>placeholder</code> mostra uma dica dentro do campo.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;input type="email" placeholder="seu@email.com"&gt;</code></pre>
+          <h4>Resultado</h4>
+          <input type="email" placeholder="seu@email.com" />
+        </article>
+
+        <article>
+          <h3><code>&lt;label&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> o rótulo de um campo. O atributo
+            <code>for</code> liga o rótulo ao campo que tem o mesmo
+            <code>id</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> dizer ao visitante o que preencher.
+            Ao clicar no rótulo, o cursor vai para o campo, e leitores de tela
+            leem o rótulo junto com ele.
+          </p>
+          <p><strong>Quando usar:</strong> sempre que houver um campo.</p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;label for="cidade"&gt;Cidade:&lt;/label&gt;
+&lt;input type="text" id="cidade"&gt;</code></pre>
+          <h4>Resultado</h4>
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" />
+        </article>
+
+        <article>
+          <h3><code>&lt;button&gt;</code></h3>
+          <p><strong>O que é:</strong> a tag de botão.</p>
+          <p>
+            <strong>Para que serve:</strong> receber o clique do visitante.
+            Dentro de um formulário, com <code>type="submit"</code>, ele envia
+            os dados. Fora dele, o JavaScript pode reagir ao clique.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para ações, como enviar, somar ou
+            zerar. Para ir a outra página, use o link <code>&lt;a&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;button&gt;Clique aqui&lt;/button&gt;</code></pre>
+          <h4>Resultado</h4>
+          <button>Clique aqui</button>
+        </article>
+      </section>
       <article>
         <h3><code>&lt;br&gt;</code></h3>
         <p>
