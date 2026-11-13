@@ -18,6 +18,16 @@
     </header>
     <main>
       <h2>Comandos de HTML</h2>
+      <nav class="indice">
+        <h3>Nesta página</h3>
+        <ul>
+          <li><a href="#estrutura">Estrutura da página</a></li>
+          <li><a href="#textos">Textos</a></li>
+          <li><a href="#links-imagens-listas">Links, imagens e listas</a></li>
+          <li><a href="#tabelas-formularios">Tabelas e formulários</a></li>
+          <li><a href="#semanticas">Estrutura semântica</a></li>
+        </ul>
+      </nav>
       <section id="estrutura">
         <h2>Estrutura da página</h2>
 
@@ -517,101 +527,167 @@
           <button>Clique aqui</button>
         </article>
       </section>
-        <section id="semanticas">
-    <h2>Estrutura semântica</h2>
+      <section id="semanticas">
+        <h2>Estrutura semântica</h2>
 
-    <article>
-      <h3><code>&lt;header&gt;</code></h3>
-      <p><strong>O que é:</strong> o cabeçalho de uma página ou de uma seção.</p>
-      <p><strong>Para que serve:</strong> reunir o título, o logotipo e o menu de navegação.</p>
-      <p><strong>Quando usar:</strong> geralmente um no topo da página. Também pode aparecer dentro de um <code>&lt;article&gt;</code>, com o título daquele conteúdo.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;header&gt;
+        <article>
+          <h3><code>&lt;header&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> o cabeçalho de uma página ou de uma seção.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir o título, o logotipo e o
+            menu de navegação.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> geralmente um no topo da página.
+            Também pode aparecer dentro de um <code>&lt;article&gt;</code>, com
+            o título daquele conteúdo.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;header&gt;
   &lt;h1&gt;Meu site&lt;/h1&gt;
 &lt;/header&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;nav&gt;</code></h3>
-      <p><strong>O que é:</strong> o bloco de navegação, com os links principais.</p>
-      <p><strong>Para que serve:</strong> mostrar ao visitante para onde ele pode ir. Leitores de tela reconhecem a <code>nav</code> como o menu.</p>
-      <p><strong>Quando usar:</strong> em menus principais e sumários. Não é para qualquer grupo de links, só para os de navegação importante.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;nav&gt;
+        <article>
+          <h3><code>&lt;nav&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> o bloco de navegação, com os links
+            principais.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mostrar ao visitante para onde ele
+            pode ir. Leitores de tela reconhecem a <code>nav</code> como o menu.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em menus principais e sumários. Não é
+            para qualquer grupo de links, só para os de navegação importante.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;nav&gt;
   &lt;a href="index.html"&gt;Início&lt;/a&gt;
   &lt;a href="html.html"&gt;HTML&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;main&gt;</code></h3>
-      <p><strong>O que é:</strong> o conteúdo principal da página.</p>
-      <p><strong>Para que serve:</strong> marcar a parte que é única daquela página, sem o cabeçalho e o rodapé que se repetem em todas.</p>
-      <p><strong>Quando usar:</strong> uma vez por página, e nunca dentro de <code>header</code>, <code>nav</code> ou <code>footer</code>.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;main&gt;
+        <article>
+          <h3><code>&lt;main&gt;</code></h3>
+          <p><strong>O que é:</strong> o conteúdo principal da página.</p>
+          <p>
+            <strong>Para que serve:</strong> marcar a parte que é única daquela
+            página, sem o cabeçalho e o rodapé que se repetem em todas.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> uma vez por página, e nunca dentro de
+            <code>header</code>, <code>nav</code> ou <code>footer</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;main&gt;
   &lt;h2&gt;Bem-vindo&lt;/h2&gt;
 &lt;/main&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;section&gt;</code></h3>
-      <p><strong>O que é:</strong> uma seção temática da página.</p>
-      <p><strong>Para que serve:</strong> agrupar conteúdos que tratam do mesmo assunto, geralmente com um título.</p>
-      <p><strong>Quando usar:</strong> quando o bloco tem um tema e um título próprio. Se for só para estilizar, use a <code>&lt;div&gt;</code>.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;section id="sobre"&gt;
+        <article>
+          <h3><code>&lt;section&gt;</code></h3>
+          <p><strong>O que é:</strong> uma seção temática da página.</p>
+          <p>
+            <strong>Para que serve:</strong> agrupar conteúdos que tratam do
+            mesmo assunto, geralmente com um título.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o bloco tem um tema e um título
+            próprio. Se for só para estilizar, use a <code>&lt;div&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;section id="sobre"&gt;
   &lt;h2&gt;Sobre&lt;/h2&gt;
   &lt;p&gt;Texto da seção.&lt;/p&gt;
 &lt;/section&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;article&gt;</code></h3>
-      <p><strong>O que é:</strong> um conteúdo completo, que faz sentido sozinho, mesmo fora da página.</p>
-      <p><strong>Para que serve:</strong> marcar itens independentes, como uma notícia, um post de blog ou um verbete desta biblioteca.</p>
-      <p><strong>Quando usar:</strong> quando o bloco poderia ser publicado separadamente em outro lugar.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;article&gt;
+        <article>
+          <h3><code>&lt;article&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> um conteúdo completo, que faz sentido
+            sozinho, mesmo fora da página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> marcar itens independentes, como
+            uma notícia, um post de blog ou um verbete desta biblioteca.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o bloco poderia ser publicado
+            separadamente em outro lugar.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;article&gt;
   &lt;h3&gt;Título do post&lt;/h3&gt;
   &lt;p&gt;Conteúdo do post.&lt;/p&gt;
 &lt;/article&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;aside&gt;</code></h3>
-      <p><strong>O que é:</strong> um conteúdo complementar, relacionado ao principal.</p>
-      <p><strong>Para que serve:</strong> reunir dicas, barras laterais, anúncios e links relacionados.</p>
-      <p><strong>Quando usar:</strong> para o que dá para tirar sem prejudicar o entendimento do conteúdo principal.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;aside&gt;
+        <article>
+          <h3><code>&lt;aside&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> um conteúdo complementar, relacionado ao
+            principal.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir dicas, barras laterais,
+            anúncios e links relacionados.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para o que dá para tirar sem
+            prejudicar o entendimento do conteúdo principal.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;aside&gt;
   &lt;h3&gt;Dica&lt;/h3&gt;
   &lt;p&gt;Salve o arquivo antes de testar.&lt;/p&gt;
 &lt;/aside&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;footer&gt;</code></h3>
-      <p><strong>O que é:</strong> o rodapé de uma página ou de uma seção.</p>
-      <p><strong>Para que serve:</strong> reunir autoria, direitos autorais, contatos e links secundários.</p>
-      <p><strong>Quando usar:</strong> geralmente um no fim da página. Também pode aparecer dentro de um <code>&lt;article&gt;</code>.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;footer&gt;
+        <article>
+          <h3><code>&lt;footer&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> o rodapé de uma página ou de uma seção.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reunir autoria, direitos autorais,
+            contatos e links secundários.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> geralmente um no fim da página. Também
+            pode aparecer dentro de um <code>&lt;article&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;footer&gt;
   &lt;p&gt;&amp;copy; 2026 Luiz Henrique&lt;/p&gt;
 &lt;/footer&gt;</code></pre>
-    </article>
+        </article>
 
-    <article>
-      <h3><code>&lt;div&gt;</code></h3>
-      <p><strong>O que é:</strong> uma caixa neutra, sem significado próprio, que funciona como bloco.</p>
-      <p><strong>Para que serve:</strong> agrupar elementos para estilizar com CSS ou manipular com JavaScript, como os cartões do seu portfólio.</p>
-      <p><strong>Quando usar:</strong> quando nenhuma tag semântica serve. É o equivalente em bloco do <code>&lt;span&gt;</code>, que é em linha.</p>
-      <h4>Exemplo</h4>
-      <pre><code>&lt;div class="cartao"&gt;
+        <article>
+          <h3><code>&lt;div&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma caixa neutra, sem significado próprio,
+            que funciona como bloco.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> agrupar elementos para estilizar
+            com CSS ou manipular com JavaScript, como os cartões do seu
+            portfólio.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando nenhuma tag semântica serve. É
+            o equivalente em bloco do <code>&lt;span&gt;</code>, que é em linha.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;div class="cartao"&gt;
   &lt;h3&gt;Fotografia&lt;/h3&gt;
 &lt;/div&gt;</code></pre>
-    </article>
-  </section>
+        </article>
+      </section>
       <article>
         <h3><code>&lt;br&gt;</code></h3>
         <p>
@@ -704,5 +780,16 @@ Linha 1
         <p>Use a tag <code>&lt;br&gt;</code> para quebrar a linha.</p>
       </article>
     </main>
+    <footer>
+      <p>
+        &copy; 2026 Luiz Henrique Pereira. Biblioteca Front-end, feita para
+        estudo.
+      </p>
+      <p>
+        <a href="index.html">Início</a> · <a href="html.html">HTML</a> ·
+        <a href="css.html">CSS</a> ·
+        <a href="javascript.html">JavaScript</a>
+      </p>
+    </footer>
   </body>
 </html>
