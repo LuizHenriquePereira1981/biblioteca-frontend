@@ -7,7 +7,7 @@
     <title>HTML, Biblioteca Front-end</title>
   </head>
   <body>
-    <header>
+    <header id="topo">
       <h1>Biblioteca Front-end</h1>
       <nav>
         <a href="index.html">Início</a>
@@ -26,6 +26,7 @@
           <li><a href="#links-imagens-listas">Links, imagens e listas</a></li>
           <li><a href="#tabelas-formularios">Tabelas e formulários</a></li>
           <li><a href="#semanticas">Estrutura semântica</a></li>
+          <li><a href="#texto-codigo">Texto e código</a></li>
         </ul>
       </nav>
       <section id="estrutura">
@@ -308,10 +309,23 @@
             <strong>Quando usar:</strong> em menus, referências e qualquer texto
             clicável. Para abrir em outra aba, use <code>target="_blank"</code>.
           </p>
+          <p>
+            <strong>Obs:</strong> por segurança, quando o link abre em outra
+            aba, use <code>rel="noopener noreferrer"</code> junto com
+            <code>target="_blank"</code>. Isso evita que a página aberta consiga
+            acessar a página original.
+          </p>
           <h4>Exemplo</h4>
-          <pre><code>&lt;a href="https://www.wikipedia.org"&gt;Ir para a Wikipedia&lt;/a&gt;</code></pre>
+          <pre><code>&lt;a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer"&gt;Ir para a Wikipedia&lt;/a&gt;</code></pre>
           <h4>Resultado</h4>
-          <p><a href="https://www.wikipedia.org">Ir para a Wikipedia</a></p>
+          <p>
+            <a
+              href="https://www.wikipedia.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ir para a Wikipedia</a
+            >
+          </p>
         </article>
 
         <article>
@@ -688,97 +702,101 @@
 &lt;/div&gt;</code></pre>
         </article>
       </section>
-      <article>
-        <h3><code>&lt;br&gt;</code></h3>
-        <p>
-          <strong>O que é:</strong> uma tag que quebra a linha, ou seja, faz o
-          texto continuar na linha de baixo.
-        </p>
-        <p>
-          <strong>Para que serve:</strong> separar linhas dentro de um mesmo
-          parágrafo, como em endereços, poemas ou versos de música.
-        </p>
-        <p>
-          <strong>Quando usar:</strong> só quando a quebra faz parte do
-          conteúdo. Para criar espaço entre blocos de texto, use parágrafos
-          separados ou o CSS.
-        </p>
-        <h4>Exemplo</h4>
-        <pre><code>&lt;p&gt;Rua das Flores, 100&lt;br&gt;São Paulo - SP&lt;/p&gt;</code></pre>
-        <h4>Resultado</h4>
-        <p>Rua das Flores, 100<br />São Paulo - SP</p>
-      </article>
-      <article>
-        <h3><code>&amp;lt;</code> e <code>&amp;gt;</code></h3>
-        <p>
-          <strong>O que é:</strong> entidades HTML, que são códigos que mostram
-          os símbolos de menor (&lt;) e de maior (&gt;) como texto na tela.
-        </p>
-        <p>
-          <strong>Para que serve:</strong> exibir uma tag na página sem o
-          navegador executá-la. Sem isso, o navegador acharia que o símbolo abre
-          uma tag.
-        </p>
-        <p>
-          <strong>Quando usar:</strong> sempre que precisar mostrar código HTML
-          escrito na tela, como nesta biblioteca. Toda entidade começa com
-          <code>&amp;</code> e termina com ponto e vírgula.
-        </p>
-        <h4>Exemplo</h4>
-        <pre><code>&amp;lt;p&amp;gt;Olá&amp;lt;/p&amp;gt;</code></pre>
-        <h4>Resultado</h4>
-        <p>&lt;p&gt;Olá&lt;/p&gt;</p>
-      </article>
+      <section id="texto-codigo">
+        <h2>Texto e código</h2>
+        <article>
+          <h3><code>&lt;br&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag que quebra a linha, ou seja, faz o
+            texto continuar na linha de baixo.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> separar linhas dentro de um mesmo
+            parágrafo, como em endereços, poemas ou versos de música.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> só quando a quebra faz parte do
+            conteúdo. Para criar espaço entre blocos de texto, use parágrafos
+            separados ou o CSS.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Rua das Flores, 100&lt;br&gt;São Paulo - SP&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Rua das Flores, 100<br />São Paulo - SP</p>
+        </article>
+        <article>
+          <h3><code>&amp;lt;</code> e <code>&amp;gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> entidades HTML, que são códigos que
+            mostram os símbolos de menor (&lt;) e de maior (&gt;) como texto na
+            tela.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> exibir uma tag na página sem o
+            navegador executá-la. Sem isso, o navegador acharia que o símbolo
+            abre uma tag.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que precisar mostrar código
+            HTML escrito na tela, como nesta biblioteca. Toda entidade começa
+            com <code>&amp;</code> e termina com ponto e vírgula.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&amp;lt;p&amp;gt;Olá&amp;lt;/p&amp;gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>&lt;p&gt;Olá&lt;/p&gt;</p>
+        </article>
 
-      <article>
-        <h3><code>&lt;pre&gt;</code></h3>
-        <p>
-          <strong>O que é:</strong> uma tag de texto pré-formatado. Ela mostra o
-          texto exatamente como foi escrito, com os espaços e as quebras de
-          linha.
-        </p>
-        <p>
-          <strong>Para que serve:</strong> exibir trechos em que a formatação
-          importa, como código, poemas e tabelas feitas com texto.
-        </p>
-        <p>
-          <strong>Quando usar:</strong> junto com a tag
-          <code>&lt;code&gt;</code>, para mostrar blocos de código de várias
-          linhas.
-        </p>
-        <h4>Exemplo</h4>
-        <pre><code>&lt;pre&gt;
+        <article>
+          <h3><code>&lt;pre&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag de texto pré-formatado. Ela mostra
+            o texto exatamente como foi escrito, com os espaços e as quebras de
+            linha.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> exibir trechos em que a formatação
+            importa, como código, poemas e tabelas feitas com texto.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> junto com a tag
+            <code>&lt;code&gt;</code>, para mostrar blocos de código de várias
+            linhas.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;pre&gt;
 Linha 1
     Linha 2 com recuo
 &lt;/pre&gt;</code></pre>
-        <h4>Resultado</h4>
-        <pre>
+          <h4>Resultado</h4>
+          <pre>
 Linha 1
     Linha 2 com recuo
 </pre
-        >
-      </article>
+          >
+        </article>
 
-      <article>
-        <h3><code>&lt;code&gt;</code></h3>
-        <p>
-          <strong>O que é:</strong> uma tag que marca um trecho como código de
-          programação.
-        </p>
-        <p>
-          <strong>Para que serve:</strong> indicar ao navegador, e a quem lê,
-          que aquele texto é código. Por padrão, ele aparece em fonte de largura
-          fixa.
-        </p>
-        <p>
-          <strong>Quando usar:</strong> em trechos curtos, no meio de uma frase,
-          ou dentro do <code>&lt;pre&gt;</code> para blocos maiores.
-        </p>
-        <h4>Exemplo</h4>
-        <pre><code>&lt;p&gt;Use a tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; para quebrar a linha.&lt;/p&gt;</code></pre>
-        <h4>Resultado</h4>
-        <p>Use a tag <code>&lt;br&gt;</code> para quebrar a linha.</p>
-      </article>
+        <article>
+          <h3><code>&lt;code&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma tag que marca um trecho como código de
+            programação.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> indicar ao navegador, e a quem lê,
+            que aquele texto é código. Por padrão, ele aparece em fonte de
+            largura fixa.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em trechos curtos, no meio de uma
+            frase, ou dentro do <code>&lt;pre&gt;</code> para blocos maiores.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Use a tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; para quebrar a linha.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Use a tag <code>&lt;br&gt;</code> para quebrar a linha.</p>
+        </article>
+      </section>
     </main>
     <footer>
       <p>
@@ -791,5 +809,6 @@ Linha 1
         <a href="javascript.html">JavaScript</a>
       </p>
     </footer>
+    <a href="#" class="voltar-topo" aria-label="Voltar ao topo">↑</a>
   </body>
 </html>
