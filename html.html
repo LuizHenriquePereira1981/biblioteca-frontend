@@ -27,6 +27,7 @@
           <li><a href="#tabelas-formularios">Tabelas e formulários</a></li>
           <li><a href="#semanticas">Estrutura semântica</a></li>
           <li><a href="#texto-codigo">Texto e código</a></li>
+          <li><a href="#multimidia">Multimídia</a></li>
         </ul>
       </nav>
       <section id="estrutura">
@@ -795,6 +796,89 @@ Linha 1
           <pre><code>&lt;p&gt;Use a tag &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; para quebrar a linha.&lt;/p&gt;</code></pre>
           <h4>Resultado</h4>
           <p>Use a tag <code>&lt;br&gt;</code> para quebrar a linha.</p>
+        </article>
+      </section>
+      <section id="multimidia">
+        <h2>Multimídia</h2>
+
+        <article>
+          <h3><code>&lt;audio&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag que coloca um player de áudio na
+            página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> tocar músicas, podcasts e gravações
+            sem precisar de programas externos.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre com o atributo
+            <code>controls</code>, que mostra os botões de tocar e pausar. Evite
+            o <code>autoplay</code>, porque o som que começa sozinho incomoda e
+            os navegadores costumam bloquear.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;audio controls src="audio/musica.mp3"&gt;
+  Seu navegador não suporta áudio.
+&lt;/audio&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>
+            Para ver o player, coloque um arquivo em uma pasta
+            <code>audio</code> e ajuste o nome no <code>src</code>.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>&lt;video&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag que coloca um player de vídeo na
+            página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> exibir vídeos hospedados no próprio
+            site, com controles de tocar, pausar e tela cheia.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para vídeos curtos e leves. Os
+            atributos <code>controls</code> e <code>width</code> são os mais
+            usados, e o <code>poster</code> define a imagem de capa antes de
+            tocar.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;video controls width="400" poster="img/capa.jpg"&gt;
+  &lt;source src="video/aula.mp4" type="video/mp4"&gt;
+  Seu navegador não suporta vídeo.
+&lt;/video&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>
+            Para ver o player, coloque um arquivo em uma pasta
+            <code>video</code> e ajuste os nomes no exemplo.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>&lt;iframe&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> uma janela que mostra outra página dentro
+            da sua.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> incorporar vídeos do YouTube, mapas
+            do Google e outros conteúdos de fora.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o conteúdo está hospedado em
+            outro serviço. Use sempre o atributo <code>title</code>, que
+            descreve o conteúdo para leitores de tela.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;iframe src="https://www.wikipedia.org" width="400" height="250" title="Wikipedia"&gt;&lt;/iframe&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>
+            Alguns sites bloqueiam a incorporação, e a janela fica em branco.
+            Para um teste seguro, use o endereço de incorporação que o próprio
+            YouTube oferece em Compartilhar e depois Incorporar.
+          </p>
         </article>
       </section>
     </main>
