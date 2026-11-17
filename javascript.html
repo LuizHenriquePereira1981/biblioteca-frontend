@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilo.css" />
-    <title>Document</title>
+    <title>JavaScript, Biblioteca Front-end</title>
   </head>
   <body>
     <header id="topo">
@@ -16,6 +16,306 @@
         <a href="javascript.html">JavaScript</a>
       </nav>
     </header>
+    <main>
+      <h2>Comandos de JavaScript</h2>
+      <nav class="indice">
+        <h3>Nesta página</h3>
+        <ul>
+          <li><a href="#variaveis">Variáveis e tipos</a></li>
+          <li><a href="#decisoes-repeticoes">Decisões e repetições</a></li>
+          <li><a href="#funcoes-eventos">Funções e eventos</a></li>
+        </ul>
+      </nav>
+
+      <section id="variaveis">
+        <h2>Variáveis e tipos</h2>
+
+        <article>
+          <h3><code>const</code></h3>
+          <p>
+            <strong>O que é:</strong> a palavra que cria uma variável cujo valor
+            não pode ser trocado depois.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> guardar um valor que não muda, como
+            o elemento que você pegou da página.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> por padrão, sempre que o valor não
+            precisar mudar. É a escolha mais segura.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const nome = "Luiz";
+const numero = document.getElementById("numero");</code></pre>
+        </article>
+
+        <article>
+          <h3><code>let</code></h3>
+          <p>
+            <strong>O que é:</strong> a palavra que cria uma variável cujo valor
+            pode ser trocado depois.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> guardar valores que mudam ao longo
+            do programa, como o contador do seu portfólio.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> só quando o valor precisar mudar. Se
+            não for mudar, use <code>const</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>let contador = 0;
+contador++;</code></pre>
+        </article>
+
+        <article>
+          <h3>Tipos de dados</h3>
+          <p>
+            <strong>O que é:</strong> as categorias de valor que o JavaScript
+            conhece. Os principais são texto (<code>string</code>), número
+            (<code>number</code>) e verdadeiro ou falso (<code>boolean</code>).
+          </p>
+          <p>
+            <strong>Para que serve:</strong> cada tipo se comporta de um jeito.
+            Números somam, textos se juntam, e booleanos alimentam as decisões
+            do <code>if</code>.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o texto vai entre aspas, o número vai
+            sem aspas, e o booleano é escrito como <code>true</code> ou
+            <code>false</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const texto = "Olá";
+const idade = 30;
+const ativo = true;</code></pre>
+        </article>
+      </section>
+      <section id="decisoes-repeticoes">
+        <h2>Decisões e repetições</h2>
+
+        <article>
+          <h3><code>if</code> e <code>else</code></h3>
+          <p>
+            <strong>O que é:</strong> a estrutura de decisão. O
+            <code>if</code> executa um bloco só se a condição for verdadeira, e
+            o <code>else</code> executa outro bloco quando ela é falsa.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> fazer o programa escolher o que
+            fazer, como mudar a cor do contador quando passa de 10.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que o resultado depender de uma
+            condição. A condição vai entre parênteses, e o bloco vai entre
+            chaves.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>if (contador &gt; 10) {
+numero.style.color = "red";
+} else {
+numero.style.color = "";
+}</code></pre>
+        </article>
+
+        <article>
+          <h3>Operadores de comparação</h3>
+          <p>
+            <strong>O que é:</strong> os símbolos que comparam dois valores e
+            devolvem verdadeiro ou falso.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> montar as condições do
+            <code>if</code>.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>===</code> compara se são
+            iguais, o <code>!==</code> compara se são diferentes, e os símbolos
+            <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code> e
+            <code>&lt;=</code> comparam tamanhos. Prefira o <code>===</code> ao
+            <code>==</code>, porque ele também confere o tipo do valor.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>texto === ""
+idade &gt;= 18
+nome !== "Luiz"</code></pre>
+        </article>
+
+        <article>
+          <h3>Operadores lógicos</h3>
+          <p>
+            <strong>O que é:</strong> os símbolos que combinam condições:
+            <code>&amp;&amp;</code> significa "e", <code>||</code> significa
+            "ou", e <code>!</code> inverte o resultado.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> testar mais de uma condição ao
+            mesmo tempo.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>&amp;&amp;</code> exige que as
+            duas sejam verdadeiras, e o <code>||</code> basta que uma seja.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>if (idade &gt;= 18 &amp;&amp; ativo) {
+console.log("Pode entrar");
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>for</code></h3>
+          <p>
+            <strong>O que é:</strong> o laço de repetição com contagem. Ele tem
+            três partes: onde começa, até quando continua e como avança.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> repetir uma tarefa um número de
+            vezes conhecido, como percorrer uma lista de itens.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando você sabe quantas vezes quer
+            repetir. O <code>i++</code> soma 1 a cada volta.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>for (let i = 0; i &lt; 3; i++) {
+console.log("Volta " + i);
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>while</code></h3>
+          <p>
+            <strong>O que é:</strong> o laço de repetição que continua enquanto
+            uma condição for verdadeira.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> repetir uma tarefa sem saber de
+            antemão quantas vezes.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando a repetição depende de uma
+            condição. Cuidado: se a condição nunca ficar falsa, o laço nunca
+            termina e trava a página.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>let numero = 3;
+while (numero &gt; 0) {
+numero--;
+}</code></pre>
+        </article>
+      </section>
+      <section id="funcoes-eventos">
+        <h2>Funções e eventos</h2>
+
+        <article>
+          <h3><code>function</code></h3>
+          <p>
+            <strong>O que é:</strong> um bloco de código com nome, que você
+            escreve uma vez e pode executar quantas vezes quiser.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> reaproveitar código e organizar o
+            programa em partes pequenas, cada uma com uma tarefa.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que uma tarefa se repetir. Os
+            valores que a função recebe ficam entre parênteses e se chamam
+            parâmetros. O <code>return</code> devolve o resultado.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>function somar(a, b) {
+  return a + b;
+}
+
+const total = somar(2, 3);</code></pre>
+        </article>
+
+        <article>
+          <h3>Função de seta</h3>
+          <p>
+            <strong>O que é:</strong> uma forma mais curta de escrever uma
+            função, usando o símbolo <code>=&gt;</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> escrever funções pequenas,
+            principalmente as que são entregues a outras funções, como nos
+            eventos.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em funções curtas e nos eventos de
+            clique. Foi a forma que você usou no contador do portfólio.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const dobro = (n) =&gt; {
+  return n * 2;
+};</code></pre>
+        </article>
+
+        <article>
+          <h3><code>addEventListener</code></h3>
+          <p>
+            <strong>O que é:</strong> o comando que fica "escutando" um evento
+            de um elemento, como um clique, e executa uma função quando ele
+            acontece.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> fazer a página reagir ao visitante,
+            como somar no contador ao clicar no botão.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que algo precisar acontecer em
+            resposta a uma ação. Ele recebe dois valores: o nome do evento e a
+            função a executar.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>botaoSomar.addEventListener("click", () =&gt; {
+  contador++;
+  numero.textContent = contador;
+});</code></pre>
+        </article>
+
+        <article>
+          <h3>Eventos mais comuns</h3>
+          <p>
+            <strong>O que é:</strong> os nomes das ações que o navegador
+            reconhece e avisa ao JavaScript.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> escolher o momento certo para
+            reagir.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>click</code> reage ao clique.
+            O <code>input</code> reage a cada tecla digitada num campo. O
+            <code>submit</code> reage ao envio de um formulário. O
+            <code>mouseover</code> reage ao mouse passando por cima.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>campo.addEventListener("input", () =&gt; {
+  console.log(campo.value);
+});</code></pre>
+        </article>
+
+        <article>
+          <h3><code>console.log</code></h3>
+          <p>
+            <strong>O que é:</strong> o comando que escreve uma mensagem no
+            Console do navegador.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> descobrir o que o programa está
+            fazendo e achar erros. Você usou o Console para investigar o botão
+            de voltar ao topo.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> durante o desenvolvimento. O Console
+            abre com F12. Depois, tire as mensagens, para não poluir a página.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>console.log("Contador:", contador);</code></pre>
+        </article>
+      </section>
+    </main>
     <footer>
       <p>
         &copy; 2026 Luiz Henrique Pereira. Biblioteca Front-end, feita para
