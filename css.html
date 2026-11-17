@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilo.css" />
-    <title>Document</title>
+    <title>CSS, Biblioteca Front-end</title>
   </head>
   <body>
     <header id="topo">
@@ -16,6 +16,972 @@
         <a href="javascript.html">JavaScript</a>
       </nav>
     </header>
+    <main>
+      <h2>Propriedades de CSS</h2>
+      <nav class="indice">
+        <h3>Nesta página</h3>
+        <ul>
+          <li><a href="#seletores">Seletores</a></li>
+          <li><a href="#cores-fundos">Cores e fundos</a></li>
+          <li><a href="#texto-fontes">Texto e fontes</a></li>
+          <li><a href="#caixa-espacamento">Caixa e espaçamento</a></li>
+          <li><a href="#layout">Layout: Flexbox e Grid</a></li>
+          <li><a href="#posicao-efeitos">Posição e efeitos</a></li>
+          <li><a href="#responsividade">Responsividade</a></li>
+        </ul>
+      </nav>
+      <section id="seletores">
+        <h2>Seletores</h2>
+
+        <article>
+          <h3><code>seletor de tag</code></h3>
+          <p>
+            <strong>O que é:</strong> o seletor que escolhe todos os elementos
+            de um tipo, escrevendo só o nome da tag.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> aplicar o mesmo estilo a todos os
+            parágrafos, títulos ou links de uma vez.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para estilos gerais da página. Para
+            casos específicos, use classe ou id.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>p {
+  color: darkblue;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>.classe</code></h3>
+          <p>
+            <strong>O que é:</strong> o seletor que escolhe os elementos que têm
+            uma classe, escrito com um ponto antes do nome.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> estilizar um grupo de elementos, de
+            tags diferentes, de uma vez.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> é o seletor mais usado no dia a dia,
+            porque é flexível e pode se repetir.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.destaque {
+  background-color: yellow;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>#id</code></h3>
+          <p>
+            <strong>O que é:</strong> o seletor que escolhe um único elemento
+            pelo seu id, escrito com uma cerquilha antes do nome.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> estilizar um elemento específico,
+            que aparece uma vez na página.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> com moderação. Como o id é único, o
+            seletor serve só para um elemento, e a classe costuma ser mais
+            flexível.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>#topo {
+  background-color: black;
+}</code></pre>
+        </article>
+      </section>
+
+      <section id="cores-fundos">
+        <h2>Cores e fundos</h2>
+
+        <article>
+          <h3><code>color</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define a cor do texto.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mudar a cor das letras de um
+            elemento.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre cuidando do contraste com o
+            fundo, para o texto continuar legível.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>p {
+  color: #1a1a1a;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="color: darkred">Este texto está em vermelho escuro.</p>
+        </article>
+
+        <article>
+          <h3><code>background-color</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define a cor de fundo.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> pintar o fundo de um elemento ou da
+            página.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em caixas, cabeçalhos, botões e
+            destaques. Combine com uma <code>color</code> que contraste.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.aviso {
+  background-color: #fff3b0;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="background-color: #fff3b0; padding: 4px 8px">
+            Este parágrafo tem fundo amarelo claro.
+          </p>
+        </article>
+      </section>
+      <section id="texto-fontes">
+        <h2>Texto e fontes</h2>
+
+        <article>
+          <h3><code>font-family</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define a fonte do texto.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> escolher o tipo de letra. Você
+            escreve uma lista, e o navegador usa a primeira que existir no
+            computador de quem visita.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre termine a lista com uma família
+            genérica, como <code>serif</code> (com serifa),
+            <code>sans-serif</code> (sem serifa) ou
+            <code>monospace</code> (largura fixa), que serve de reserva.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>p {
+  font-family: Georgia, "Times New Roman", serif;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="font-family: Georgia, &quot;Times New Roman&quot;, serif">
+            Texto em fonte com serifa.
+          </p>
+          <p style="font-family: Arial, sans-serif">
+            Texto em fonte sem serifa.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>font-size</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define o tamanho da
+            letra.
+          </p>
+          <p><strong>Para que serve:</strong> aumentar ou diminuir o texto.</p>
+          <p>
+            <strong>Quando usar:</strong> prefira <code>rem</code> ou
+            <code>em</code> a <code>px</code>, porque acompanham a configuração
+            de tamanho do navegador de quem lê. O <code>1rem</code> equivale ao
+            tamanho padrão da página, em geral 16px.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>h2 {
+  font-size: 1.5rem;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="font-size: 0.9rem">Texto pequeno, 0.9rem.</p>
+          <p style="font-size: 1.5rem">Texto grande, 1.5rem.</p>
+        </article>
+
+        <article>
+          <h3><code>font-weight</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define a espessura da
+            letra.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> deixar o texto em negrito ou mais
+            fino.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> use <code>bold</code> ou números de
+            100 a 900. O valor <code>normal</code> equivale a 400, e o
+            <code>bold</code> a 700.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.forte {
+  font-weight: bold;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="font-weight: normal">Texto normal.</p>
+          <p style="font-weight: bold">Texto em negrito.</p>
+        </article>
+
+        <article>
+          <h3><code>text-align</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que alinha o texto na
+            horizontal.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> posicionar o texto à esquerda, ao
+            centro, à direita ou justificado.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>center</code> funciona bem em
+            títulos e botões. Em textos longos, prefira o <code>left</code>, que
+            é mais fácil de ler.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>h1 {
+  text-align: center;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="text-align: left">Alinhado à esquerda.</p>
+          <p style="text-align: center">Alinhado ao centro.</p>
+          <p style="text-align: right">Alinhado à direita.</p>
+        </article>
+
+        <article>
+          <h3><code>line-height</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define a altura da
+            linha, ou seja, o espaço entre uma linha de texto e a outra.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> deixar o texto mais arejado e
+            confortável de ler.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em textos longos, com um número sem
+            unidade, como <code>1.6</code>. Esse número multiplica o tamanho da
+            letra.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>p {
+  line-height: 1.7;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>text-decoration</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que adiciona ou remove
+            linhas no texto, como o sublinhado.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> tirar o sublinhado padrão dos
+            links, ou riscar um texto.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em links de menu, com
+            <code>none</code>. Em links dentro de texto, mantenha o sublinhado,
+            porque ele ajuda a identificar o que é clicável.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>a {
+  text-decoration: none;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="text-decoration: underline">Sublinhado.</p>
+          <p style="text-decoration: line-through">Riscado.</p>
+        </article>
+      </section>
+      <section id="caixa-espacamento">
+        <h2>Caixa e espaçamento</h2>
+
+        <article>
+          <h3>O modelo de caixa</h3>
+          <p>
+            <strong>O que é:</strong> a ideia de que todo elemento da página é
+            uma caixa, formada por quatro camadas, de dentro para fora: o
+            conteúdo, o <code>padding</code>, a <code>border</code> e o
+            <code>margin</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> entender o tamanho e o espaço de
+            cada elemento, que é a base de qualquer layout.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que algo na página estiver
+            maior, menor ou mais colado do que o esperado, a causa quase sempre
+            está nessas camadas.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.caixa {
+  padding: 20px;
+  border: 3px solid black;
+  margin: 30px;
+}</code></pre>
+          <h4>Resultado</h4>
+          <div
+            style="
+              padding: 20px;
+              border: 3px solid black;
+              margin: 10px 0;
+              background-color: #fff3b0;
+            "
+          >
+            Caixa com padding de 20px e borda de 3px.
+          </div>
+        </article>
+
+        <article>
+          <h3><code>padding</code></h3>
+          <p>
+            <strong>O que é:</strong> o espaço interno, entre o conteúdo e a
+            borda.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> afastar o texto das bordas da
+            caixa, para ele não ficar colado.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em botões, cartões, cabeçalhos e
+            qualquer caixa com fundo ou borda. Dá para escrever um valor para os
+            quatro lados, ou dois valores: o primeiro para cima e baixo, o
+            segundo para esquerda e direita.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.botao {
+  padding: 8px 16px;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p
+            style="
+              background-color: #fff3b0;
+              padding: 8px 16px;
+              display: inline-block;
+            "
+          >
+            Padding de 8px por 16px.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>margin</code></h3>
+          <p>
+            <strong>O que é:</strong> o espaço externo, entre a caixa e os
+            elementos vizinhos.
+          </p>
+          <p><strong>Para que serve:</strong> separar uma caixa da outra.</p>
+          <p>
+            <strong>Quando usar:</strong> para dar distância entre blocos. O
+            truque <code>margin: 0 auto</code> centraliza uma caixa que tem
+            largura definida, e você já o usou no <code>main</code> desta
+            biblioteca.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartao {
+  margin: 0 auto;
+  width: 300px;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>border</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que desenha uma borda em
+            volta da caixa.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> destacar e delimitar um elemento.
+            Ela junta três valores: a espessura, o estilo e a cor.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em cartões, campos de formulário e
+            destaques. Para cantos arredondados, combine com o
+            <code>border-radius</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartao {
+  border: 2px solid #3b2a1a;
+  border-radius: 8px;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p
+            style="border: 2px solid #3b2a1a; border-radius: 8px; padding: 8px"
+          >
+            Borda de 2px, sólida, com cantos arredondados.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>box-sizing</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define como o tamanho da
+            caixa é calculado.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> por padrão, o
+            <code>width</code> mede só o conteúdo, e o padding e a borda são
+            somados por fora. Com <code>border-box</code>, o
+            <code>width</code> já inclui o padding e a borda, e a conta fica
+            mais previsível.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quase sempre, aplicado a todos os
+            elementos com o seletor universal, no começo do arquivo CSS.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>width</code> e <code>height</code></h3>
+          <p>
+            <strong>O que é:</strong> as propriedades que definem a largura e a
+            altura de um elemento.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> controlar o tamanho de caixas,
+            imagens e botões.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> a largura costuma ser definida, e a
+            altura é melhor deixar que o conteúdo decida. O
+            <code>max-width</code> limita a largura máxima, e funciona muito bem
+            para páginas responsivas.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>main {
+  max-width: 900px;
+  margin: 0 auto;
+}</code></pre>
+        </article>
+      </section>
+      <section id="layout">
+        <h2>Layout: Flexbox e Grid</h2>
+
+        <article>
+          <h3><code>display: flex</code></h3>
+          <p>
+            <strong>O que é:</strong> o modo de layout que organiza os filhos de
+            um elemento em uma linha ou em uma coluna.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> alinhar e distribuir itens, como os
+            cartões do portfólio e o cabeçalho desta biblioteca.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para layouts em uma direção, como
+            menus, cartões lado a lado e centralização. A regra vai no elemento
+            pai, e quem muda de posição são os filhos.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartoes {
+display: flex;
+gap: 20px;
+}</code></pre>
+          <h4>Resultado</h4>
+          <div style="display: flex; gap: 10px">
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              Um
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              Dois
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              Três
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3><code>justify-content</code> e <code>align-items</code></h3>
+          <p>
+            <strong>O que é:</strong> as propriedades do Flexbox que posicionam
+            os itens: o <code>justify-content</code> no sentido da linha
+            (horizontal), e o <code>align-items</code> no sentido contrário
+            (vertical).
+          </p>
+          <p>
+            <strong>Para que serve:</strong> centralizar, afastar ou distribuir
+            os itens dentro do pai.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>center</code> centraliza, o
+            <code>space-between</code> joga o primeiro item para um canto e o
+            último para o outro, e o <code>space-around</code> distribui espaços
+            iguais em volta.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.barra {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}</code></pre>
+          <h4>Resultado</h4>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: #fff3b0;
+              padding: 10px;
+              border: 1px solid #3b2a1a;
+            "
+          >
+            <span>Esquerda</span>
+            <span>Direita</span>
+          </div>
+        </article>
+
+        <article>
+          <h3><code>flex-wrap</code> e <code>flex-direction</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>flex-wrap</code> permite que os
+            itens quebrem de linha quando não cabem, e o
+            <code>flex-direction</code> troca a direção, de linha para coluna.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> adaptar o layout ao tamanho da
+            tela. É o que empilha os cartões no celular.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>wrap</code> em grupos de
+            cartões, e o <code>column</code> em telas pequenas, dentro de uma
+            media query.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartoes {
+display: flex;
+flex-wrap: wrap;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>display: grid</code></h3>
+          <p>
+            <strong>O que é:</strong> o modo de layout que organiza os filhos em
+            linhas e colunas ao mesmo tempo, como uma tabela de verdade.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> montar galerias, painéis e o layout
+            da página inteira.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o desenho precisa de duas
+            direções. O <code>grid-template-columns</code> define as colunas, e
+            o <code>1fr</code> significa uma fração do espaço disponível.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.galeria {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}</code></pre>
+          <h4>Resultado</h4>
+          <div
+            style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px"
+          >
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              1
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              2
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              3
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              4
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              5
+            </div>
+            <div
+              style="
+                background-color: #fff3b0;
+                padding: 10px;
+                border: 1px solid #3b2a1a;
+              "
+            >
+              6
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3><code>gap</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define o espaço entre os
+            itens de um Flexbox ou de um Grid.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> afastar os itens uns dos outros sem
+            precisar de <code>margin</code> em cada um.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que usar Flexbox ou Grid.
+            Aceita um valor para os dois sentidos, ou dois valores: primeiro as
+            linhas, depois as colunas.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.grade {
+display: grid;
+gap: 20px 10px;
+}</code></pre>
+        </article>
+      </section>
+      <section id="posicao-efeitos">
+        <h2>Posição e efeitos</h2>
+
+        <article>
+          <h3><code>position</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define como um elemento
+            é posicionado na página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> tirar um elemento do fluxo normal,
+            para colocá-lo num lugar exato ou fazê-lo acompanhar a rolagem.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>fixed</code> gruda na tela,
+            como o botão de voltar ao topo desta página. O
+            <code>sticky</code> gruda depois de chegar a certo ponto, como o
+            cabeçalho. O <code>absolute</code> posiciona em relação ao pai mais
+            próximo que tenha <code>position: relative</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>header {
+position: sticky;
+top: 0;
+}</code></pre>
+          <h4>Resultado</h4>
+          <div
+            style="
+              position: relative;
+              height: 80px;
+              background-color: #fff3b0;
+              border: 1px solid #3b2a1a;
+            "
+          >
+            <span
+              style="
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                background-color: #3b2a1a;
+                color: #f1e5c8;
+                padding: 2px 8px;
+              "
+              >Canto inferior direito</span
+            >
+          </div>
+        </article>
+
+        <article>
+          <h3><code>z-index</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define quem fica na
+            frente quando dois elementos se sobrepõem.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> garantir que o cabeçalho fixo fique
+            por cima do conteúdo que rola.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> só funciona em elementos com
+            <code>position</code> diferente do padrão. Quanto maior o número,
+            mais perto de quem olha.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>header {
+position: sticky;
+z-index: 100;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>box-shadow</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que desenha uma sombra em
+            volta da caixa.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> dar profundidade a cartões e
+            botões.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> com os valores de deslocamento
+            horizontal, deslocamento vertical, desfoque e cor. Uma sombra suave
+            e transparente costuma ficar mais elegante que uma forte.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartao {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}</code></pre>
+          <h4>Resultado</h4>
+          <div
+            style="
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+              padding: 12px;
+              background-color: #fff;
+            "
+          >
+            Cartão com sombra suave.
+          </div>
+        </article>
+
+        <article>
+          <h3><code>transition</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que faz uma mudança de
+            estilo acontecer de forma suave, em vez de instantânea.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> animar o efeito de passar o mouse,
+            como nos cartões do seu portfólio.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> no elemento que vai mudar, indicando
+            qual propriedade e quanto tempo dura. Sem ela, a mudança do
+            <code>:hover</code> é brusca.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartao {
+transition: transform 0.3s ease;
+}
+.cartao:hover {
+transform: translateY(-4px);
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>transform</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que move, gira, aumenta ou
+            inclina um elemento sem mexer no resto do layout.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> efeitos visuais, como subir um
+            cartão ao passar o mouse.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> com funções como
+            <code>translateY</code> (move na vertical),
+            <code>rotate</code> (gira) e <code>scale</code> (muda o tamanho).
+            Funciona muito bem junto com a <code>transition</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.icone {
+transform: rotate(10deg) scale(1.1);
+}</code></pre>
+          <h4>Resultado</h4>
+          <p
+            style="
+              display: inline-block;
+              background-color: #fff3b0;
+              padding: 8px 16px;
+              border: 1px solid #3b2a1a;
+              transform: rotate(-5deg);
+            "
+          >
+            Texto girado em 5 graus.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>:hover</code></h3>
+          <p>
+            <strong>O que é:</strong> uma pseudo-classe, ou seja, um estado do
+            elemento. Vale quando o mouse está em cima dele.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mudar o estilo ao passar o mouse,
+            como a cor de um link.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em links, botões e cartões, para
+            avisar que são clicáveis. No celular, que não tem mouse, o efeito
+            não aparece, então não esconda informação essencial nele.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>a:hover {
+color: darkred;
+}</code></pre>
+        </article>
+      </section>
+      <section id="responsividade">
+        <h2>Responsividade</h2>
+
+        <article>
+          <h3><code>@media</code></h3>
+          <p>
+            <strong>O que é:</strong> a media query, uma regra que só vale
+            quando a tela atende a uma condição, como ter uma largura máxima.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> adaptar o layout ao tamanho da
+            tela, por exemplo empilhando cartões no celular.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para ajustar o que não cabe em telas
+            pequenas. O <code>max-width</code> vale até aquela largura, e o
+            <code>min-width</code> vale a partir dela. Uma largura comum para
+            separar o celular é 768px.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>@media (max-width: 768px) {
+.cartao {
+width: 100%;
+}
+}</code></pre>
+        </article>
+
+        <article>
+          <h3>A tag <code>viewport</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag <code>&lt;meta&gt;</code> do
+            <code>&lt;head&gt;</code> que diz ao celular para usar a largura
+            real da tela.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> sem ela, o celular finge ter uma
+            tela larga e encolhe tudo, e as media queries não funcionam direito.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em todas as páginas, sempre no
+            <code>&lt;head&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3>Unidades relativas</h3>
+          <p>
+            <strong>O que é:</strong> medidas que se ajustam ao contexto, em vez
+            de valer um número fixo de pixels. As principais são <code>%</code>,
+            <code>rem</code>, <code>vw</code> e <code>vh</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> o <code>%</code> é uma fração do
+            elemento pai, o <code>rem</code> acompanha o tamanho padrão da letra
+            da página, e o <code>vw</code> e o <code>vh</code> são 1% da largura
+            e da altura da tela.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>rem</code> para fontes e
+            espaços, o <code>%</code> para larguras flexíveis, e o
+            <code>vh</code> para seções que devem ocupar parte da tela, como o
+            <code>min-height: 70vh</code> do parallax do guia.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.caixa {
+width: 50%;
+padding: 1rem;
+min-height: 30vh;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>max-width</code> com imagens</h3>
+          <p>
+            <strong>O que é:</strong> o truque de limitar a largura das imagens
+            ao tamanho do espaço onde estão.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> impedir que uma imagem grande
+            estoure a tela do celular.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em todas as imagens do site. Com
+            <code>height: auto</code>, a altura acompanha, e a imagem não fica
+            distorcida.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>img {
+max-width: 100%;
+height: auto;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3>Mobile first</h3>
+          <p>
+            <strong>O que é:</strong> a prática de escrever o CSS pensando
+            primeiro no celular, e depois acrescentar regras para telas maiores.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> a maior parte dos visitantes usa o
+            celular, e é mais simples ampliar um layout simples do que encolher
+            um complicado.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em projetos novos, escrevendo o estilo
+            base para a tela pequena, e usando
+            <code>@media (min-width: ...)</code> para as maiores.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.cartoes {
+display: flex;
+flex-direction: column;
+}
+
+@media (min-width: 768px) {
+.cartoes {
+flex-direction: row;
+}
+}</code></pre>
+        </article>
+      </section>
+    </main>
     <footer>
       <p>
         &copy; 2026 Luiz Henrique Pereira. Biblioteca Front-end, feita para
