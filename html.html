@@ -28,6 +28,8 @@
           <li><a href="#semanticas">Estrutura semântica</a></li>
           <li><a href="#texto-codigo">Texto e código</a></li>
           <li><a href="#multimidia">Multimídia</a></li>
+          <li><a href="#atributos-globais">Atributos globais</a></li>
+          <li><a href="#acessibilidade">Acessibilidade</a></li>
         </ul>
       </nav>
       <section id="estrutura">
@@ -879,6 +881,222 @@ Linha 1
             Para um teste seguro, use o endereço de incorporação que o próprio
             YouTube oferece em Compartilhar e depois Incorporar.
           </p>
+        </article>
+      </section>
+      <section id="atributos-globais">
+        <h2>Atributos globais</h2>
+
+        <article>
+          <h3><code>class</code></h3>
+          <p>
+            <strong>O que é:</strong> um nome de grupo que você dá a um ou mais
+            elementos.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> aplicar o mesmo estilo CSS, ou o
+            mesmo comportamento do JavaScript, a vários elementos de uma vez.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que o estilo se repetir.
+            Diferente do <code>id</code>, a mesma classe pode aparecer quantas
+            vezes você quiser, e um elemento pode ter várias classes separadas
+            por espaço.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p class="destaque"&gt;Texto em destaque&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p class="destaque">Texto em destaque</p>
+        </article>
+
+        <article>
+          <h3><code>id</code></h3>
+          <p>
+            <strong>O que é:</strong> um identificador único para um elemento.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> criar links internos, como os do
+            índice desta página, e permitir que o JavaScript encontre o elemento
+            com <code>getElementById</code>.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para elementos que precisam ser
+            localizados individualmente. O valor não pode se repetir na página.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;section id="sobre"&gt;...&lt;/section&gt;
+&lt;a href="#sobre"&gt;Ir para Sobre&lt;/a&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>style</code></h3>
+          <p>
+            <strong>O que é:</strong> um atributo que recebe regras de CSS
+            escritas direto na tag.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> aplicar um estilo rápido a um único
+            elemento, sem criar regra no arquivo CSS.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> só em testes rápidos ou em valores que
+            o JavaScript muda. Para o resto, prefira <code>class</code> e o
+            arquivo CSS, que fica mais organizado e fácil de manter.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p style="color: green; font-weight: bold;"&gt;Texto verde&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p style="color: green; font-weight: bold">Texto verde</p>
+        </article>
+
+        <article>
+          <h3><code>title</code></h3>
+          <p>
+            <strong>O que é:</strong> um texto de ajuda que aparece quando o
+            mouse fica parado sobre o elemento.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> dar uma explicação extra, como o
+            significado de uma sigla.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em informações complementares. Não
+            conte com ele para o essencial, porque não aparece no celular, que
+            não tem mouse.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Usamos &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Usamos <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+        </article>
+
+        <article>
+          <h3><code>hidden</code></h3>
+          <p>
+            <strong>O que é:</strong> um atributo que esconde o elemento da
+            página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> manter um conteúdo no HTML sem
+            mostrá-lo, para o JavaScript revelar depois, como uma mensagem de
+            erro ou um menu.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para conteúdo que só aparece em certas
+            situações. O elemento continua no código, mas não aparece na tela.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p hidden&gt;Você não me vê.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>
+            O parágrafo escondido está logo aqui, e você não o vê:
+            <span>(nada aparece de propósito)</span>
+          </p>
+          <p hidden>Você não me vê.</p>
+        </article>
+      </section>
+      <section id="acessibilidade">
+        <h2>Acessibilidade</h2>
+
+        <article>
+          <h3><code>alt</code></h3>
+          <p>
+            <strong>O que é:</strong> o texto alternativo de uma imagem, escrito
+            no atributo <code>alt</code> da tag <code>&lt;img&gt;</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> descrever a imagem para quem não
+            pode vê-la, como pessoas que usam leitor de tela. Também aparece se
+            a imagem não carregar.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em toda imagem que tem significado,
+            descrevendo o que ela mostra. Se a imagem for só decoração, deixe o
+            <code>alt</code> vazio, assim: <code>alt=""</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;img src="img/luiz.png" alt="Luiz Henrique sorrindo" width="150"&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>lang</code></h3>
+          <p>
+            <strong>O que é:</strong> o atributo que informa o idioma do
+            conteúdo.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> ajuda o leitor de tela a escolher a
+            pronúncia certa e os navegadores a oferecerem tradução.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> na tag <code>&lt;html&gt;</code>, para
+            a página inteira. Também pode ir em um trecho em outro idioma.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;html lang="pt-BR"&gt;
+&lt;p&gt;Ele disse &lt;span lang="en"&gt;hello&lt;/span&gt;.&lt;/p&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>aria-label</code></h3>
+          <p>
+            <strong>O que é:</strong> um atributo que dá um nome a um elemento
+            para os leitores de tela, sem aparecer na tela.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> descrever elementos que não têm
+            texto, como um botão que só tem um ícone ou uma seta.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o elemento não tem texto
+            visível que explique o que ele faz. Se já existe texto, não precisa.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;a href="#" aria-label="Voltar ao topo"&gt;↑&lt;/a&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>É o mesmo que o botão de voltar ao topo no canto desta página.</p>
+        </article>
+
+        <article>
+          <h3>Títulos em ordem</h3>
+          <p>
+            <strong>O que é:</strong> o uso das tags de título,
+            <code>h1</code> a <code>h6</code>, na sequência certa, sem pular
+            níveis.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> quem usa leitor de tela navega pela
+            página saltando de título em título, como se fosse um índice.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre. Um <code>h1</code> por página,
+            depois <code>h2</code> para as seções e <code>h3</code> para as
+            partes. Não escolha o título pelo tamanho da letra, para isso existe
+            o CSS.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;h1&gt;Meu site&lt;/h1&gt;
+&lt;h2&gt;Sobre&lt;/h2&gt;
+&lt;h3&gt;Minha história&lt;/h3&gt;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>&lt;label&gt;</code> ligado ao campo</h3>
+          <p>
+            <strong>O que é:</strong> o rótulo de um campo de formulário, ligado
+            a ele pelo <code>for</code> e pelo <code>id</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> o leitor de tela lê o rótulo junto
+            com o campo, e o clique no rótulo leva o cursor ao campo, o que
+            ajuda quem tem dificuldade de acertar áreas pequenas.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em todo campo de formulário. O
+            <code>placeholder</code> sozinho não substitui o rótulo.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;label for="email"&gt;E-mail:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;</code></pre>
         </article>
       </section>
     </main>

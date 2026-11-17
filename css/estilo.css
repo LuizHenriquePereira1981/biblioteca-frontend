@@ -158,3 +158,9 @@ footer a:hover {
 .voltar-topo:hover {
     background-color: #5a4028;
 }
+
+.destaque {
+    background-color: #fff3b0;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
