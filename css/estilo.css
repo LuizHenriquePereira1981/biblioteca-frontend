@@ -32,6 +32,11 @@ header h1 {
     font-size: 1.4rem;
 }
 
+header h1 a {
+    color: #f1e5c8;
+    text-decoration: none;
+}
+
 nav a {
     color: #f1e5c8;
     text-decoration: none;
@@ -186,4 +191,62 @@ footer a:hover {
 
 #sumario p {
     margin: 4px 0 0;
+}
+
+.pagina-capa {
+    background-color: #3b2a1a;
+    background-image: none;
+    color: #f1e5c8;
+}
+
+.capa {
+    min-height: 100vh;
+    max-width: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.capa-etiqueta {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.9rem;
+    margin: 0 0 16px;
+}
+
+.capa h1 {
+    font-size: 3rem;
+    margin: 0 0 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #f1e5c8;
+}
+
+.capa-subtitulo {
+    max-width: 420px;
+    font-size: 1.2rem;
+    margin: 0 0 32px;
+}
+
+.capa-botao {
+    color: #3b2a1a;
+    background-color: #f1e5c8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 32px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.capa-botao:hover {
+    transform: translateY(-3px);
+}
+
+.capa-autor {
+    margin: 48px 0 0;
+    font-style: italic;
+    font-size: 0.95rem;
 }
