@@ -294,6 +294,148 @@
           <hr />
           <p>Segundo assunto</p>
         </article>
+        <article>
+          <h3><code>&lt;abbr&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag de abreviação ou sigla. O atributo
+            <code>title</code> guarda o significado por extenso.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> explicar uma sigla ao visitante,
+            que vê o significado ao passar o mouse.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> na primeira vez que uma sigla aparece
+            no texto. Em telas de toque, o <code>title</code> não aparece, então
+            escreva o significado no próprio texto, quando for importante.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;O &lt;abbr title="Document Object Model"&gt;DOM&lt;/abbr&gt; é a árvore da página.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>
+            O <abbr title="Document Object Model">DOM</abbr> é a árvore da
+            página.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>&lt;blockquote&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag de citação em bloco, para um trecho
+            tirado de outra fonte.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> destacar uma citação longa, com
+            recuo na margem.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para citações de uma ou mais frases.
+            Para trechos curtos no meio de uma frase, use a tag
+            <code>&lt;q&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;blockquote&gt;
+  &lt;p&gt;Quem não arrisca, não petisca.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+          <h4>Resultado</h4>
+          <blockquote>
+            <p>Quem não arrisca, não petisca.</p>
+          </blockquote>
+        </article>
+
+        <article>
+          <h3><code>&lt;mark&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag que destaca um trecho, como um
+            marca-texto amarelo.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> chamar a atenção para uma palavra
+            relevante naquele momento, como o termo buscado.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para realce de relevância. Para
+            importância, o certo é o <code>&lt;strong&gt;</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;Aprenda &lt;mark&gt;HTML&lt;/mark&gt; passo a passo.&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>Aprenda <mark>HTML</mark> passo a passo.</p>
+        </article>
+
+        <article>
+          <h3><code>&lt;small&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a tag de letra pequena, para observações
+            laterais.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> marcar avisos legais, direitos
+            autorais e notas de rodapé.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para textos secundários. Não use só
+            para diminuir a letra, para isso existe o CSS.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;&lt;small&gt;Preços sujeitos a alteração.&lt;/small&gt;&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p><small>Preços sujeitos a alteração.</small></p>
+        </article>
+
+        <article>
+          <h3><code>&lt;sup&gt;</code> e <code>&lt;sub&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>sup</code> eleva o texto, como um
+            expoente, e o <code>sub</code> o abaixa, como um índice.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> escrever potências, notas e
+            fórmulas químicas.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em conteúdo que realmente exige esse
+            formato, como matemática e química.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;p&gt;10&lt;sup&gt;2&lt;/sup&gt; e H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;</code></pre>
+          <h4>Resultado</h4>
+          <p>10<sup>2</sup> e H<sub>2</sub>O</p>
+        </article>
+
+        <article>
+          <h3>
+            <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> e
+            <code>&lt;dd&gt;</code>
+          </h3>
+          <p>
+            <strong>O que é:</strong> a lista de descrição. O <code>dl</code> é
+            a lista, o <code>dt</code> é o termo e o <code>dd</code> é a
+            descrição dele.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> montar glossários e pares de nome e
+            significado, como esta própria biblioteca.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando cada item tem um termo e uma
+            explicação. Um termo pode ter várias descrições.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Linguagem de marcação&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Linguagem de estilos&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+          <h4>Resultado</h4>
+          <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de estilos</dd>
+          </dl>
+        </article>
       </section>
       <section id="links-imagens-listas">
         <h2>Links, imagens e listas</h2>
