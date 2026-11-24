@@ -25,6 +25,7 @@
           <li><a href="#decisoes-repeticoes">Decisões e repetições</a></li>
           <li><a href="#funcoes-eventos">Funções e eventos</a></li>
           <li><a href="#dom">DOM: mexendo na página</a></li>
+          <li><a href="#arrays">Arrays e métodos</a></li>
         </ul>
       </nav>
 
@@ -479,6 +480,131 @@ lista.appendChild(item);</code></pre>
           <h4>Exemplo</h4>
           <pre><code>const texto = campo.value.trim();
 campo.value = "";</code></pre>
+        </article>
+      </section>
+      <section id="arrays">
+        <h2>Arrays e métodos</h2>
+
+        <article>
+          <h3>O que é um array</h3>
+          <p>
+            <strong>O que é:</strong> uma lista de valores guardada numa só
+            variável, escrita entre colchetes e separada por vírgulas.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> guardar vários itens juntos, como
+            as tarefas da sua lista.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que tiver um grupo de valores
+            parecidos. Cada item tem uma posição, chamada de índice, e a
+            contagem começa no zero.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const frutas = ["maçã", "banana", "uva"];
+console.log(frutas[0]);
+console.log(frutas.length);</code></pre>
+        </article>
+
+        <article>
+          <h3><code>push</code> e <code>pop</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>push</code> acrescenta um item no
+            fim do array, e o <code>pop</code> remove o último.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> aumentar e diminuir a lista durante
+            o programa.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>push</code> quando a pessoa
+            adiciona algo, como uma nova tarefa. O <code>pop</code> devolve o
+            item que saiu.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const tarefas = ["estudar"];
+tarefas.push("praticar");
+tarefas.pop();</code></pre>
+        </article>
+
+        <article>
+          <h3><code>forEach</code></h3>
+          <p>
+            <strong>O que é:</strong> o método que executa uma função para cada
+            item do array.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> percorrer a lista fazendo algo com
+            cada item, como mostrar cada tarefa na tela.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando você quer só executar uma ação
+            em cada item. Ele não devolve nada.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const frutas = ["maçã", "banana", "uva"];
+frutas.forEach((fruta) =&gt; {
+  console.log(fruta);
+});</code></pre>
+        </article>
+
+        <article>
+          <h3><code>map</code></h3>
+          <p>
+            <strong>O que é:</strong> o método que cria um array novo,
+            transformando cada item do original.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> converter uma lista em outra, como
+            pôr todos os nomes em maiúsculas. O array original não muda.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando precisar de uma lista nova a
+            partir de outra. Ele é muito usado no React, para transformar dados
+            em elementos da tela.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const numeros = [1, 2, 3];
+const dobros = numeros.map((n) =&gt; n * 2);</code></pre>
+        </article>
+
+        <article>
+          <h3><code>filter</code></h3>
+          <p>
+            <strong>O que é:</strong> o método que cria um array novo só com os
+            itens que passam num teste.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> escolher alguns itens de uma lista,
+            como as tarefas que ainda não foram feitas.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando a função devolver
+            <code>true</code> para o item que fica, e <code>false</code> para o
+            que sai.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const idades = [12, 18, 25];
+const adultos = idades.filter((i) =&gt; i &gt;= 18);</code></pre>
+        </article>
+
+        <article>
+          <h3><code>includes</code> e <code>indexOf</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>includes</code> diz se o array tem
+            um valor, e o <code>indexOf</code> diz em qual posição ele está.
+          </p>
+          <p><strong>Para que serve:</strong> procurar dentro da lista.</p>
+          <p>
+            <strong>Quando usar:</strong> o <code>includes</code> devolve
+            <code>true</code> ou <code>false</code>. O
+            <code>indexOf</code> devolve a posição, ou -1 se o valor não
+            existir.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const frutas = ["maçã", "banana"];
+frutas.includes("uva");
+frutas.indexOf("banana");</code></pre>
         </article>
       </section>
     </main>
