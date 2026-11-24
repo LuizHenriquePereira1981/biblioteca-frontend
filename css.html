@@ -28,6 +28,9 @@
           <li><a href="#layout">Layout: Flexbox e Grid</a></li>
           <li><a href="#posicao-efeitos">Posição e efeitos</a></li>
           <li><a href="#responsividade">Responsividade</a></li>
+          <li>
+            <a href="#variaveis-avancado">Variáveis e recursos avançados</a>
+          </li>
         </ul>
       </nav>
       <section id="seletores">
@@ -978,6 +981,180 @@ flex-direction: column;
 .cartoes {
 flex-direction: row;
 }
+}</code></pre>
+        </article>
+      </section>
+      <section id="variaveis-avancado">
+        <h2>Variáveis e recursos avançados</h2>
+
+        <article>
+          <h3>Variáveis CSS (<code>--nome</code> e <code>var()</code>)</h3>
+          <p>
+            <strong>O que é:</strong> um jeito de guardar um valor, como uma
+            cor, com um nome, para usar em vários lugares. O nome começa com
+            dois hífens, e o <code>var()</code> usa o valor guardado.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mudar a cor do site inteiro mexendo
+            em um lugar só, em vez de trocar o código em cada regra.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para cores, fontes e espaços que se
+            repetem. As variáveis ficam dentro de <code>:root</code>, que
+            representa a página inteira.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>:root {
+  --marrom: #3b2a1a;
+  --bege: #f1e5c8;
+}
+
+header {
+  background-color: var(--marrom);
+  color: var(--bege);
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>calc()</code></h3>
+          <p>
+            <strong>O que é:</strong> uma função que faz contas com medidas, até
+            com unidades diferentes.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> calcular tamanhos que dependem de
+            dois valores, como "a largura toda menos 40 pixels".
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando um valor fixo e um relativo
+            precisam andar juntos. Nas contas com mais e menos, os espaços em
+            volta do sinal são obrigatórios.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.caixa {
+  width: calc(100% - 40px);
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>:focus</code></h3>
+          <p>
+            <strong>O que é:</strong> uma pseudo-classe que vale quando o
+            elemento está selecionado, como um campo onde o cursor está
+            piscando.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mostrar ao visitante onde ele está,
+            principalmente a quem navega só pelo teclado.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em campos de formulário, botões e
+            links. Não esconda o contorno do foco sem colocar outro no lugar,
+            porque isso prejudica a acessibilidade.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>input:focus {
+  border-color: #007BFF;
+  outline: 2px solid #007BFF;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>:nth-child()</code></h3>
+          <p>
+            <strong>O que é:</strong> uma pseudo-classe que escolhe um filho
+            pela sua posição dentro do pai.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> estilizar itens alternados ou
+            específicos, como linhas pares de uma tabela.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>even</code> pega os pares, o
+            <code>odd</code> pega os ímpares, e um número escolhe aquela posição
+            exata.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>tr:nth-child(even) {
+  background-color: #eee;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>display: none</code> e <code>opacity</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>display: none</code> tira o
+            elemento da página, como se ele não existisse. O
+            <code>opacity</code> deixa o elemento transparente, de 0 (invisível)
+            a 1 (normal).
+          </p>
+          <p>
+            <strong>Para que serve:</strong> esconder ou esmaecer elementos.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>display: none</code> para o
+            que não deve ocupar espaço, e o <code>opacity</code> para efeitos
+            suaves, porque ele combina com a <code>transition</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>.escondido {
+  display: none;
+}
+
+.fraco {
+  opacity: 0.5;
+}</code></pre>
+          <h4>Resultado</h4>
+          <p style="opacity: 0.4">Este texto está com opacidade 0.4.</p>
+        </article>
+
+        <article>
+          <h3><code>@keyframes</code> e <code>animation</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>@keyframes</code> descreve as
+            etapas de uma animação, e o <code>animation</code> aplica essa
+            animação a um elemento.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> criar movimentos que acontecem
+            sozinhos, sem precisar de um evento, como um elemento que pulsa.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para efeitos de destaque. Use com
+            moderação, porque excesso de movimento cansa e atrapalha quem tem
+            sensibilidade a movimento.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>@keyframes pulsar {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.botao {
+  animation: pulsar 1s infinite alternate;
+}</code></pre>
+        </article>
+
+        <article>
+          <h3><code>object-fit</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que define como uma imagem
+            se encaixa no espaço que tem, quando a proporção é diferente.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> evitar que a imagem fique esticada
+            ou achatada.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>cover</code> preenche tudo e
+            corta o que sobra, e o <code>contain</code> mostra a imagem inteira,
+            deixando sobras.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }</code></pre>
         </article>
       </section>

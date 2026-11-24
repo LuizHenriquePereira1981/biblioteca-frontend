@@ -543,6 +543,128 @@
           <h4>Resultado</h4>
           <button>Clique aqui</button>
         </article>
+        <article>
+          <h3><code>&lt;textarea&gt;</code></h3>
+          <p><strong>O que é:</strong> um campo de texto de várias linhas.</p>
+          <p>
+            <strong>Para que serve:</strong> receber textos longos, como
+            mensagens e comentários.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o <code>input</code> de uma
+            linha só não basta. Os atributos <code>rows</code> e
+            <code>cols</code> definem a altura e a largura iniciais.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;textarea rows="3" cols="30" placeholder="Escreva sua mensagem"&gt;&lt;/textarea&gt;</code></pre>
+          <h4>Resultado</h4>
+          <textarea
+            rows="3"
+            cols="30"
+            placeholder="Escreva sua mensagem"
+          ></textarea>
+        </article>
+
+        <article>
+          <h3><code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> a lista suspensa. O <code>select</code> é
+            a caixa, e cada <code>option</code> é uma escolha.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> deixar o visitante escolher uma
+            opção de uma lista pronta, como o estado ou a cidade.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando há muitas opções fixas. O
+            atributo <code>value</code> de cada <code>option</code> é o que o
+            formulário envia.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;select&gt;
+  &lt;option value="sp"&gt;São Paulo&lt;/option&gt;
+  &lt;option value="rj"&gt;Rio de Janeiro&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+          <h4>Resultado</h4>
+          <select>
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+          </select>
+        </article>
+
+        <article>
+          <h3><code>type="checkbox"</code></h3>
+          <p>
+            <strong>O que é:</strong> uma caixinha de marcar, que pode ficar
+            ligada ou desligada.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> permitir que o visitante marque
+            várias opções, ou aceite algo, como os termos de uso.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando cada opção é independente das
+            outras. O atributo <code>checked</code> deixa a caixinha marcada
+            desde o começo.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;input type="checkbox" id="html"&gt;
+&lt;label for="html"&gt;Gosto de HTML&lt;/label&gt;</code></pre>
+          <h4>Resultado</h4>
+          <input type="checkbox" id="gosto-html" />
+          <label for="gosto-html">Gosto de HTML</label>
+        </article>
+
+        <article>
+          <h3><code>type="radio"</code></h3>
+          <p>
+            <strong>O que é:</strong> uma bolinha de escolha. Só uma do grupo
+            pode ficar marcada.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> obrigar o visitante a escolher uma
+            única opção entre algumas.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para escolhas exclusivas, como sim ou
+            não. O que une as bolinhas num grupo é o mesmo atributo
+            <code>name</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;input type="radio" name="nivel" id="iniciante"&gt;
+&lt;label for="iniciante"&gt;Iniciante&lt;/label&gt;
+&lt;input type="radio" name="nivel" id="avancado"&gt;
+&lt;label for="avancado"&gt;Avançado&lt;/label&gt;</code></pre>
+          <h4>Resultado</h4>
+          <input type="radio" name="nivel" id="nivel-iniciante" />
+          <label for="nivel-iniciante">Iniciante</label>
+          <input type="radio" name="nivel" id="nivel-intermediário" />
+          <label for="nivel-intermediário">Intermediário</label>
+          <input type="radio" name="nivel" id="nivel-avancado" />
+          <label for="nivel-avancado">Avançado</label>
+        </article>
+
+        <article>
+          <h3><code>required</code></h3>
+          <p>
+            <strong>O que é:</strong> um atributo que torna o campo obrigatório.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> impedir o envio do formulário com o
+            campo vazio. O próprio navegador mostra o aviso.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> nos campos sem os quais o formulário
+            não faz sentido, como o e-mail de um cadastro.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;input type="text" required&gt;</code></pre>
+          <h4>Resultado</h4>
+          <form>
+            <input type="text" placeholder="Campo obrigatório" required />
+            <button type="submit">Enviar</button>
+          </form>
+        </article>
       </section>
       <section id="semanticas">
         <h2>Estrutura semântica</h2>
