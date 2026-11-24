@@ -552,6 +552,34 @@
             <li>Salve o arquivo</li>
           </ol>
         </article>
+        <article>
+          <h3><code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>figure</code> agrupa um conteúdo
+            ilustrativo, como uma imagem, e o <code>figcaption</code> é a
+            legenda dele.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> ligar a legenda à imagem de forma
+            que o navegador e os leitores de tela entendam que as duas andam
+            juntas.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em imagens, gráficos e trechos de
+            código que têm legenda. O <code>figcaption</code> pode ficar antes
+            ou depois do conteúdo.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;figure&gt;
+  &lt;img src="img/luiz.png" alt="Luiz Henrique" width="200"&gt;
+  &lt;figcaption&gt;Luiz Henrique, autor da biblioteca.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+          <h4>Resultado</h4>
+          <figure>
+            <img src="img/luiz.png" alt="Luiz Henrique" width="200" />
+            <figcaption>Luiz Henrique, autor da biblioteca.</figcaption>
+          </figure>
+        </article>
       </section>
       <section id="tabelas-formularios">
         <h2>Tabelas e formulários</h2>
@@ -775,13 +803,15 @@
           <h4>Exemplo</h4>
           <pre><code>&lt;input type="radio" name="nivel" id="iniciante"&gt;
 &lt;label for="iniciante"&gt;Iniciante&lt;/label&gt;
+&lt;input type="radio" name="nivel" id="intermediario"&gt;
+&lt;label for="intermediario"&gt;Intermediário&lt;/label&gt;
 &lt;input type="radio" name="nivel" id="avancado"&gt;
 &lt;label for="avancado"&gt;Avançado&lt;/label&gt;</code></pre>
           <h4>Resultado</h4>
           <input type="radio" name="nivel" id="nivel-iniciante" />
           <label for="nivel-iniciante">Iniciante</label>
-          <input type="radio" name="nivel" id="nivel-intermediário" />
-          <label for="nivel-intermediário">Intermediário</label>
+          <input type="radio" name="nivel" id="nivel-intermediario" />
+          <label for="nivel-intermediario">Intermediário</label>
           <input type="radio" name="nivel" id="nivel-avancado" />
           <label for="nivel-avancado">Avançado</label>
         </article>
@@ -806,6 +836,107 @@
             <input type="text" placeholder="Campo obrigatório" required />
             <button type="submit">Enviar</button>
           </form>
+        </article>
+        <article>
+          <h3>
+            <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+            <code>&lt;tfoot&gt;</code> e <code>&lt;caption&gt;</code>
+          </h3>
+          <p>
+            <strong>O que é:</strong> as tags que organizam uma tabela em
+            partes. O <code>thead</code> é o cabeçalho, o <code>tbody</code> é o
+            corpo, o <code>tfoot</code> é o rodapé e o <code>caption</code> é a
+            legenda.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> deixar a estrutura da tabela clara
+            para leitores de tela e permitir estilizar cada parte separadamente.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em tabelas de dados. O
+            <code>caption</code> deve ser o primeiro filho do
+            <code>table</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;table&gt;
+  &lt;caption&gt;Preços&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Produto&lt;/th&gt;&lt;th&gt;Preço&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Café&lt;/td&gt;&lt;td&gt;R$ 12,00&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Pão&lt;/td&gt;&lt;td&gt;R$ 8,00&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;R$ 20,00&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+          <h4>Resultado</h4>
+          <table>
+            <caption>
+              Preços
+            </caption>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Café</td>
+                <td>R$ 12,00</td>
+              </tr>
+              <tr>
+                <td>Pão</td>
+                <td>R$ 8,00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total</td>
+                <td>R$ 20,00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </article>
+
+        <article>
+          <h3><code>colspan</code> e <code>rowspan</code></h3>
+          <p>
+            <strong>O que é:</strong> atributos de célula que fazem uma célula
+            ocupar mais de uma coluna (<code>colspan</code>) ou mais de uma
+            linha (<code>rowspan</code>).
+          </p>
+          <p>
+            <strong>Para que serve:</strong> montar tabelas com títulos que
+            abrangem várias colunas, como um cabeçalho de grupo.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o dado se aplica a várias
+            células. O número é a quantidade de colunas ou linhas ocupadas, e as
+            células que sobrarem na linha devem ser removidas.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Cardápio&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Café&lt;/td&gt;
+    &lt;td&gt;R$ 12,00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+          <h4>Resultado</h4>
+          <table>
+            <tr>
+              <th colspan="2">Cardápio</th>
+            </tr>
+            <tr>
+              <td>Café</td>
+              <td>R$ 12,00</td>
+            </tr>
+          </table>
         </article>
       </section>
       <section id="semanticas">
