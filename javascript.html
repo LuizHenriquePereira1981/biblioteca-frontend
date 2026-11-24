@@ -24,6 +24,7 @@
           <li><a href="#variaveis">Variáveis e tipos</a></li>
           <li><a href="#decisoes-repeticoes">Decisões e repetições</a></li>
           <li><a href="#funcoes-eventos">Funções e eventos</a></li>
+          <li><a href="#dom">DOM: mexendo na página</a></li>
         </ul>
       </nav>
 
@@ -313,6 +314,171 @@ const total = somar(2, 3);</code></pre>
           </p>
           <h4>Exemplo</h4>
           <pre><code>console.log("Contador:", contador);</code></pre>
+        </article>
+      </section>
+      <section id="dom">
+        <h2>DOM: mexendo na página</h2>
+
+        <article>
+          <h3>O que é o DOM</h3>
+          <p>
+            <strong>O que é:</strong> a sigla de Document Object Model. É a
+            versão da sua página que o navegador monta na memória, como uma
+            árvore de elementos que o JavaScript consegue ler e mudar.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> permitir que o JavaScript encontre
+            elementos, troque textos e estilos, crie e remova partes da página,
+            sem precisar recarregá-la.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> sempre que a página precisar reagir ao
+            visitante. O ponto de entrada é o objeto <code>document</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>console.log(document.title);</code></pre>
+        </article>
+
+        <article>
+          <h3><code>getElementById</code></h3>
+          <p>
+            <strong>O que é:</strong> o comando que encontra um elemento da
+            página pelo seu <code>id</code>.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> pegar um elemento para guardar numa
+            variável e mexer nele depois.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o elemento tem um
+            <code>id</code>. Se o <code>id</code> não existir, o resultado é
+            <code>null</code>, e o código seguinte dá erro.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const numero = document.getElementById("numero");</code></pre>
+        </article>
+
+        <article>
+          <h3><code>querySelector</code></h3>
+          <p>
+            <strong>O que é:</strong> o comando que encontra o primeiro elemento
+            que combina com um seletor de CSS.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> pegar elementos por classe, tag ou
+            qualquer seletor, com a mesma escrita do CSS.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando não há <code>id</code>. Para
+            pegar todos os elementos que combinam, use o
+            <code>querySelectorAll</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const titulo = document.querySelector("h1");
+const cartoes = document.querySelectorAll(".cartao");</code></pre>
+        </article>
+
+        <article>
+          <h3><code>textContent</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que lê ou troca o texto de
+            um elemento.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mudar o que aparece na tela, como o
+            número do contador.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para textos simples. Ela trata tudo
+            como texto, e não como HTML, o que é mais seguro do que
+            <code>innerHTML</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>numero.textContent = 5;</code></pre>
+        </article>
+
+        <article>
+          <h3><code>style</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que muda o estilo de um
+            elemento direto pelo JavaScript.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> trocar cores, tamanhos e
+            visibilidade em resposta a um evento, como o contador ficando
+            vermelho acima de 10.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> para mudanças pontuais. As
+            propriedades de CSS com hífen viram escritas juntas, com a segunda
+            palavra maiúscula, como <code>backgroundColor</code>. Para vários
+            estilos, é mais organizado trocar a classe.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>numero.style.color = "red";
+numero.style.backgroundColor = "yellow";</code></pre>
+        </article>
+
+        <article>
+          <h3><code>classList</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que adiciona, remove ou
+            alterna classes CSS de um elemento.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> mudar o visual por inteiro,
+            deixando o estilo no arquivo CSS e o JavaScript só decidindo quando
+            aplicar.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> o <code>add</code> acrescenta uma
+            classe, o <code>remove</code> tira, e o <code>toggle</code> liga e
+            desliga, como o riscar e desriscar das tarefas.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>item.classList.toggle("feito");</code></pre>
+        </article>
+
+        <article>
+          <h3><code>createElement</code> e <code>appendChild</code></h3>
+          <p>
+            <strong>O que é:</strong> o <code>createElement</code> cria um
+            elemento novo na memória, e o <code>appendChild</code> o coloca
+            dentro de outro elemento, na página.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> acrescentar partes à página sem
+            escrevê-las no HTML, como cada tarefa da sua lista.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> quando o conteúdo depende do visitante
+            ou de dados. O elemento criado só aparece depois do
+            <code>appendChild</code>.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const item = document.createElement("li");
+item.textContent = "Estudar JavaScript";
+lista.appendChild(item);</code></pre>
+        </article>
+
+        <article>
+          <h3><code>value</code></h3>
+          <p>
+            <strong>O que é:</strong> a propriedade que lê ou troca o conteúdo
+            de um campo de formulário.
+          </p>
+          <p>
+            <strong>Para que serve:</strong> pegar o que o visitante digitou, ou
+            limpar o campo depois de usar.
+          </p>
+          <p>
+            <strong>Quando usar:</strong> em campos <code>input</code>. O
+            resultado é sempre um texto, mesmo quando o visitante digita um
+            número. O <code>trim()</code> tira os espaços do começo e do fim.
+          </p>
+          <h4>Exemplo</h4>
+          <pre><code>const texto = campo.value.trim();
+campo.value = "";</code></pre>
         </article>
       </section>
     </main>

@@ -164,3 +164,26 @@ footer a:hover {
     padding: 4px 8px;
     border-radius: 4px;
 }
+
+#sumario ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sumario li {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 5px solid #3b2a1a;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+}
+
+#sumario a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3b2a1a;
+}
+
+#sumario p {
+    margin: 4px 0 0;
+}
